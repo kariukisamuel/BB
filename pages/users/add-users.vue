@@ -1,9 +1,8 @@
 <template>
   <div>
     <v-row class="add-users-page">
-      <v-card elevation="2" class="w-100 pa-10 mt-10">
-        <div class="d-flex justify-center">
-          <v-card elevation="2" class="w-50 pa-10">
+
+          <v-card elevation="2" class="w-100 pa-10">
             <h1 class="text-center my-5">Add User</h1>
             <v-alert
                 border="left"
@@ -66,8 +65,7 @@
                     submit
             </v-btn>
 
-          </v-card>
-        </div>
+
       </v-card>
 
 
@@ -120,6 +118,8 @@
         const errors = []
         if (!this.$v.avatar.$dirty)
           return errors
+        !this.$v.avatar.required && errors.push('Avatar is required.')
+        return errors  
       },
       fNameErrors() {
         const errors = []

@@ -79,11 +79,30 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
+    icon: {
+      /* icon options */
+      sizes: [64, 120, 144, 152, 192, 384, 512],
+      filename: 'icon.png',
+    },
+    meta: {
+      /* meta options */
+      mobileAppIOS: true,
+      name: 'Basebone',
+      description: 'Basebone Interview Code Assignment',
+      nativeUI: true,
+    },
     manifest: {
-      lang: 'en'
+      name: 'Welcome To Basebone',
+      short_name: 'Basebone',
+      lang: 'en',
+      useWebmanifestExtension: false,
+      background_color: '#ffffff',
+      theme_color: '#6279fd'
+    },
+    workbox: {
+      autoregister: true,
     }
   },
-
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/css/variables.scss'],
