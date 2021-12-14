@@ -135,7 +135,7 @@
         if (!this.$v.lname.$dirty)
           return errors
           !this.$v.lname.maxLength && errors.push('Last Name must be at most 10 characters long') 
-          !this.$v.lname.minLength && errors.push('First Name must be at least 3 characters long') 
+          !this.$v.lname.minLength && errors.push('Last Name must be at least 3 characters long') 
           !this.$v.lname.required && errors.push('Last Name is required.')
         return errors
       },
